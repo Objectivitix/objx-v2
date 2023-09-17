@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="#"><img src="./dummy.jpg" alt="Logo for web developer Calo" /></a>
+      <a class="header__home-link" href="#"><img src="./dummy.jpg" alt="Logo for web developer Calo" /></a>
       <nav class="nav">
         <ol class="nav__list">
           <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
@@ -18,22 +18,22 @@
     </header>
 
     <main class="main">
-      <header>
-        <hgroup>
-          <h1>Hey, I'm Calo 👋</h1>
-          <p>Technology is cool!</p>
+      <header class="intro">
+        <hgroup class="intro__head">
+          <h1 class="intro__title">Hey, I'm Calo 👋</h1>
+          <p class="intro__desc">Code fascinates me.</p>
         </hgroup>
-        <a href="#about">Get to Know Me</a>
+        <a class="intro__cta" href="#about">Get to Know Me</a>
       </header>
 
-      <section>
+      <section class="section">
         <h2 id="about">About Me</h2>
-        <p>
+        <p class="prose">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis eum assumenda nam quia
           nisi quibusdam, magni aut, praesentium autem quasi distinctio alias eaque error cupiditate
           mollitia repellendus eius deleniti earum.
         </p>
-        <p>
+        <p class="prose">
           Voluptatum dignissimos eius dolorem illum soluta vitae nobis facilis in dolor suscipit
           aspernatur vero ab consequuntur laborum impedit dolorum consequatur quidem magni possimus
           sint animi inventore qui, natus alias. Architecto.
@@ -62,7 +62,7 @@
         </ul>
       </section>
 
-      <section>
+      <section class="section projects-section">
         <h2 id="projects">Projects</h2>
         <ul class="projects">
           <li class="project">
@@ -134,16 +134,16 @@
         </ul>
       </section>
 
-      <section>
+      <section class="section">
         <h2 id="contact">Contact</h2>
-        <p>
+        <p class="prose">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatum autem
           dignissimos! Saepe aperiam architecto, fugit modi odio voluptatum explicabo, ipsum vero
           alias itaque atque!
         </p>
         <address class="address">
-          <a href="#"><img src="./dummy.jpg" alt="placeholder" /></a>
-          <a href="#"><img src="./dummy.jpg" alt="placeholder" /></a>
+          <a class="address__link" href="#"><img src="./dummy.jpg" alt="placeholder" /></a>
+          <a class="address__link" href="#"><img src="./dummy.jpg" alt="placeholder" /></a>
         </address>
       </section>
     </main>
