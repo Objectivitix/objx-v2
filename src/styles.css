@@ -39,6 +39,13 @@ ul {
 
   --clr-heading: hsl(200, 20%, 18%);
   --clr-text: hsl(200 10% 30%);
+
+  --header-height: 7rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + min(18vh, 15rem));
 }
 
 body {
@@ -61,11 +68,12 @@ img {
 
 /* HIGH-LEVEL LAYOUT */
 
-body {
+.top-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 30rem;
-  width: min(90vw, 120rem);
+  gap: 10rem;
+  max-width: min(87vw, 120rem);
+  padding-bottom: 20rem;
   margin: auto;
 }
 
@@ -94,7 +102,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7rem;
+  height: var(--header-height);
   background-color: white;
 }
 
@@ -114,8 +122,8 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 6rem;
-  height: max(40rem, calc(100vh - 7rem));
-  margin: -30rem 0;
+  height: max(40rem, calc(100vh - var(--header-height)));
+  margin: -10rem 0 -30rem 0;
 }
 
 .intro__head {
@@ -197,7 +205,25 @@ body {
   width: 15rem;
 }
 
+/* FOOTER */
+
+.footer__text {
+  font-style: italic;
+}
+
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 55em) {
+  .intro__desc {
+    font-size: 9vw;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .intro__title {
+    font-size: calc(8.5vw + 1.5rem);
+  }
+}
 
 @media screen and (max-width: 35em) {
   .nav__list {
