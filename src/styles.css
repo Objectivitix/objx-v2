@@ -1,6 +1,6 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 /* RESET */
 
@@ -26,13 +26,13 @@ ul {
 :root {
   font-size: 62.5%;
 
-  --fs-300: 2.0rem;
+  --fs-300: 2rem;
   --fs-400: 2.2rem;
   --fs-500: 2.4rem;
   --fs-600: 2.8rem;
   --fs-700: 3.2rem;
   --fs-800: 3.6rem;
-  --fs-900: 4.0rem;
+  --fs-900: 4rem;
 
   --fw-reg: 400;
   --fw-bld: 700;
