@@ -49,6 +49,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-size: var(--fs-400);
   line-height: 1.5;
@@ -72,7 +73,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 10rem;
-  max-width: min(87vw, 120rem);
+  width: min(87vw, 120rem);
   padding-bottom: 20rem;
   margin: auto;
 }
@@ -93,6 +94,54 @@ img {
   max-width: 70ch;
 }
 
+/* DECORATION */
+
+.hero-background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 60vh;
+
+  background: linear-gradient(
+    45deg,
+    hsl(140 100% 85%),
+    hsl(190 100% 85%) 50%,
+    hsl(290 100% 85%)
+  );
+  background-size: 225%;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
+
+  animation: fluid 7s ease-in-out alternate infinite;
+}
+
+@keyframes fluid {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.footer-background {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 60vh;
+
+  background: linear-gradient(
+    45deg,
+    hsl(140 100% 95%),
+    hsl(190 100% 95%) 50%,
+    hsl(290 100% 95%)
+  );
+  clip-path: polygon(0 15vw, 100% 0, 100% 100%, 0 100%);
+
+  transition: opacity 50ms;
+}
+
 /* HEADER */
 
 .header {
@@ -100,10 +149,21 @@ img {
   top: 0;
   z-index: 1;
   display: flex;
+  justify-content: center;
+  background-color: transparent;
+  transition: background-color 200ms;
+}
+
+.header--bg {
+  background-color: white;
+}
+
+.header__content {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  width: min(87vw, 120rem);
   height: var(--header-height);
-  background-color: white;
 }
 
 .header__home-link {
@@ -115,24 +175,24 @@ img {
   gap: min(7vw, 6rem);
 }
 
-/* INTRO */
+/* HERO */
 
-.intro {
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 6rem;
   height: max(40rem, calc(100vh - var(--header-height)));
-  margin: -10rem 0 -30rem 0;
+  margin-bottom: -30rem;
 }
 
-.intro__head {
+.hero__head {
   font-size: min(11vw, 8rem);
   font-weight: var(--fw-bld);
   line-height: normal;
 }
 
-.intro__title {
+.hero__title {
   font-size: inherit;
 }
 
@@ -216,7 +276,7 @@ img {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 55em) {
-  .intro__desc {
+  .hero__desc {
     font-size: 9vw;
   }
 }
